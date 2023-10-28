@@ -30,7 +30,7 @@ function App() {
 
     return todosPersonagens.map((personagem) => (
       <div className="card char" key={personagem.id}>
-        <img src={personagem.image} />
+        <img src={personagem.image} alt={ personagem.image } />
         <h2>{personagem.name}</h2>
 
         <div className="char-info">
@@ -59,7 +59,7 @@ function App() {
       setConteudo(await listaPersonagens());
     }
     getConteudo();
-  }, []);
+  });
 
   return (
     <div className="App">
